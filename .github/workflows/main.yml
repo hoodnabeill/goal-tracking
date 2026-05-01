@@ -25,6 +25,8 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -37,6 +39,7 @@ jobs:
         run: |
           git clone https://github.com/flutter/flutter.git --depth 1 --branch stable "$HOME/flutter"
           echo "$HOME/flutter/bin" >> "$GITHUB_PATH"
+          export PATH="$HOME/flutter/bin:$PATH"
           flutter --version
 
       - name: Generate Flutter web platform files if missing
