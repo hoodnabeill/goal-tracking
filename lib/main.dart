@@ -29,7 +29,7 @@ class ProgressEngineApp extends StatelessWidget {
           elevation: 0,
           centerTitle: false,
         ),
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           color: const Color(0xFF0E1A2A),
           elevation: 0,
           margin: EdgeInsets.zero,
