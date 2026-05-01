@@ -89,7 +89,7 @@ class _GoalScreenState extends State<GoalScreen> {
                     final updatedGoal = _goal.addTask(title);
                     await _applyGoalUpdate(updatedGoal);
 
-                    if (!context.mounted) {
+                    if (!mounted) {
                       return;
                     }
 
